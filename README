@@ -1,0 +1,15 @@
+"""
+For our project we are creating a virus that...
+  1. Searches
+    - Search recurses through the current folder and finds .py files. 
+    - If the file is already infected, it skips it. 
+    - Otherwise, it adds it to the list of files to be infected.
+  2. Infects
+    -Infect grabs the virus portion of the code from itself and prepends it to each of the victim files. 
+    - This way, everytime each of the infected python files run, it runs the virus first    
+  3. Bombs
+    -Bomb is the portion of the code that gets triggered by a date. 
+    -In this case, it is triggered by Cinco de Mayo and prints a [harmless] “Feliz Cinco de Mayo!!!” message to the screen.
+
+References: Cranklin
+"""
